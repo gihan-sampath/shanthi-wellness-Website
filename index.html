@@ -1,53 +1,246 @@
-<!doctype html>
-<html lang="en">
+<!DOCTYPE html>
+<html lang="de" class="scroll-smooth">
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>My Simple Site</title>
-  <meta name="description" content="A fast, accessible, mobile‑first starter website.">
-  <link rel="icon" href="/assets/favicon.ico">
-  <meta property="og:title" content="My Simple Site">
-  <meta property="og:description" content="A fast, accessible, mobile‑first starter website.">
-  <meta property="og:type" content="website">
-  <meta property="og:url" content="https://example.com/">
-  <meta property="og:image" content="https://example.com/assets/og-image.png">
-  <meta name="twitter:card" content="summary_large_image">
-  <link rel="stylesheet" href="/assets/styles.css">
-  <script defer src="/assets/main.js"></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shanthi-Wellness | Ayurvedische Behandlungen in Erlangen</title>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=Lora:wght@400;500&display=swap" rel="stylesheet">
+
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        burgundy: '#5B2C3F',
+                        gold: '#C5A059',
+                        peach: '#FDF4EF', // Softened for readability
+                        peachDark: '#F7E1D7'
+                    },
+                    fontFamily: {
+                        serif: ['"Playfair Display"', 'serif'],
+                        body: ['"Lora"', 'serif'],
+                    }
+                }
+            }
+        }
+    </script>
 </head>
-<body>
-  <a class="skip-link" href="#main">Skip to content</a>
-  <header class="site-header">
-    <div class="container">
-      <nav class="nav">
-        <a class="brand" href="/">MySite</a>
-        <button class="nav-toggle" aria-expanded="false" aria-controls="nav-menu">Menu</button>
-        <ul id="nav-menu" class="nav-menu">
-          <li><a href="/">Home</a></li>
-          <li><a href="/about.html">About</a></li>
-        </ul>
-      </nav>
-    </div>
-  </header>
+<body class="font-body bg-peach text-gray-800 antialiased selection:bg-gold selection:text-white">
 
-  <main id="main" class="container stack">
-    <h1>Welcome 👋</h1>
-    <p>This is a minimal, production-ready static site you can deploy to Vercel.</p>
+    <nav class="fixed w-full z-50 bg-burgundy/95 backdrop-blur-sm text-peach shadow-lg transition-all duration-300">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between h-20 items-center">
+                <div class="flex-shrink-0 flex items-center">
+                    <a href="#home" class="font-serif text-2xl font-bold tracking-wider text-gold">Shanthi-Wellness</a>
+                </div>
+                <div class="hidden md:flex space-x-8">
+                    <a href="#home" class="hover:text-gold transition-colors duration-200 text-sm uppercase tracking-widest font-semibold">Startseite</a>
+                    <a href="#services" class="hover:text-gold transition-colors duration-200 text-sm uppercase tracking-widest font-semibold">Leistungen</a>
+                    <a href="#advantages" class="hover:text-gold transition-colors duration-200 text-sm uppercase tracking-widest font-semibold">Ayurveda</a>
+                    <a href="#contact" class="hover:text-gold transition-colors duration-200 text-sm uppercase tracking-widest font-semibold">Kontakt</a>
+                </div>
+                <div class="md:hidden flex items-center">
+                    <span class="text-xs uppercase tracking-widest text-gold">Menü</span>
+                </div>
+            </div>
+        </div>
+    </nav>
 
-    <section class="card">
-      <h2>Why this starter?</h2>
-      <ul>
-        <li>No build step, just HTML/CSS/JS.</li>
-        <li>Accessible, responsive, fast.</li>
-        <li>Perfect for the free tier on Vercel or GitHub Pages.</li>
-      </ul>
+    <header id="home" class="relative min-h-screen flex items-center justify-center bg-black overflow-hidden pt-20">
+        <div class="absolute inset-0 bg-[url('Image_1.jpg')] bg-cover bg-center opacity-40"></div>
+        
+        <div class="relative z-10 text-center px-4 max-w-4xl mx-auto">
+            <p class="text-gold font-serif italic text-xl md:text-2xl mb-4">Willkommen bei</p>
+            <h1 class="text-5xl md:text-7xl font-serif text-peach font-bold mb-6 drop-shadow-lg leading-tight">
+                Shanthi-Wellness <br/> <span class="text-3xl md:text-5xl font-normal">Ayurvedic Massage Center</span>
+            </h1>
+            <p class="text-peachDark text-lg md:text-xl mb-10 max-w-2xl mx-auto drop-shadow-md">
+                Finden Sie Ihre innere Balance und tiefe Entspannung in unserer Wohlfühloase in Erlangen.
+            </p>
+            <div class="flex flex-col sm:flex-row justify-center gap-4">
+                <a href="tel:091319324818" class="bg-burgundy hover:bg-opacity-90 border-2 border-burgundy text-peach px-8 py-4 rounded shadow-lg transition duration-300 font-semibold uppercase tracking-wider text-sm flex items-center justify-center gap-2">
+                    <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"></path></svg>
+                    09131 9324818
+                </a>
+                <a href="https://wa.me/4915156420530" target="_blank" class="bg-[#25D366] hover:bg-opacity-90 border-2 border-[#25D366] text-white px-8 py-4 rounded shadow-lg transition duration-300 font-semibold uppercase tracking-wider text-sm flex items-center justify-center gap-2">
+                    <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51a12.8 12.8 0 00-.57-.01c-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/></svg>
+                    WhatsApp
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <section id="services" class="py-24 bg-peachDark">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-serif font-bold text-burgundy mb-4">Preisliste & Leistungen</h2>
+                <div class="w-24 h-1 bg-gold mx-auto"></div>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-12 lg:gap-16">
+                
+                <div class="bg-peach p-8 md:p-10 shadow-xl rounded-lg border-t-4 border-gold">
+                    <h3 class="text-2xl font-serif font-bold text-burgundy mb-6">Ayurvedische Massagen</h3>
+                    <ul class="space-y-4">
+                        <li class="flex justify-between border-b border-burgundy/20 pb-2">
+                            <span>Rücken Massage <span class="text-sm italic text-gray-600 block">(Upanahasweda)</span></span>
+                            <span class="text-right"><span class="block text-sm">30 Min</span><span class="font-bold text-burgundy">36,00 €</span></span>
+                        </li>
+                        <li class="flex justify-between border-b border-burgundy/20 pb-2">
+                            <span>Kopf und Gesichts Massage <span class="text-sm italic text-gray-600 block">(Mukabhyanga)</span></span>
+                            <span class="text-right"><span class="block text-sm">30 Min</span><span class="font-bold text-burgundy">36,00 €</span></span>
+                        </li>
+                        <li class="flex justify-between border-b border-burgundy/20 pb-2">
+                            <span>Bein und Fuß Massage <span class="text-sm italic text-gray-600 block">(Padabhyanga)</span></span>
+                            <span class="text-right"><span class="block text-sm">30 Min</span><span class="font-bold text-burgundy">36,00 €</span></span>
+                        </li>
+                        <li class="flex justify-between border-b border-burgundy/20 pb-2">
+                            <span>Ganzkörperölmassage <span class="text-sm italic text-gray-600 block">(Sharira Vasti)</span></span>
+                            <span class="text-right"><span class="block text-sm">60 Min</span><span class="font-bold text-burgundy">66,00 €</span></span>
+                        </li>
+                        <li class="flex justify-between border-b border-burgundy/20 pb-2">
+                            <span>Fußreflexzonenmassage</span>
+                            <span class="text-right"><span class="block text-sm">30 Min</span><span class="font-bold text-burgundy">36,00 €</span></span>
+                        </li>
+                        <li class="flex justify-between border-b border-burgundy/20 pb-2">
+                            <span>Kräuterbeutel Rücken <span class="text-sm italic text-gray-600 block">(Sveda Vasti)</span></span>
+                            <span class="text-right"><span class="block text-sm">30 Min</span><span class="font-bold text-burgundy">45,00 €</span></span>
+                        </li>
+                        <li class="flex justify-between border-b border-burgundy/20 pb-2">
+                            <span>Kräuterbeutel Ganzkörper <span class="text-sm italic text-gray-600 block">(Sveda Vasti)</span></span>
+                            <span class="text-right"><span class="block text-sm">60 Min</span><span class="font-bold text-burgundy">87,00 €</span></span>
+                        </li>
+                        <li class="flex justify-between border-b border-burgundy/20 pb-2">
+                            <span>Öl-Stirn-Guss <span class="text-sm italic text-gray-600 block">(Shirodhara)</span></span>
+                            <span class="text-right"><span class="block text-sm">45 Min</span><span class="font-bold text-burgundy">51,00 €</span></span>
+                        </li>
+                        <li class="flex justify-between pb-2">
+                            <span>Königsguss mit vier Händen <span class="text-sm italic text-gray-600 block">(Abhyanga)</span></span>
+                            <span class="text-right"><span class="block text-sm">60 Min</span><span class="font-bold text-burgundy">105,00 €</span></span>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="space-y-12 lg:space-y-16">
+                    <div class="bg-peach p-8 md:p-10 shadow-xl rounded-lg border-t-4 border-gold">
+                        <h3 class="text-2xl font-serif font-bold text-burgundy mb-6">Traditionelle Thai-Druck Massage</h3>
+                        <p class="text-sm text-gray-700 mb-6 italic">Dynamische und kraftvolle Massage mit Gelenkmobilisation und Dehnbewegungen entlang der Energielinien.</p>
+                        <ul class="space-y-4">
+                            <li class="flex justify-between border-b border-burgundy/20 pb-2">
+                                <span>Rückenmassage</span>
+                                <span class="text-right"><span class="block text-sm">30 Min</span><span class="font-bold text-burgundy">33,00 €</span></span>
+                            </li>
+                            <li class="flex justify-between pb-2">
+                                <span>Ganzkörpermassage</span>
+                                <span class="text-right"><span class="block text-sm">60 Min</span><span class="font-bold text-burgundy">57,00 €</span></span>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div class="bg-peach p-8 md:p-10 shadow-xl rounded-lg border-t-4 border-gold">
+                        <h3 class="text-2xl font-serif font-bold text-burgundy mb-6">Unsere Spezialmassagen</h3>
+                        <ul class="space-y-4">
+                            <li class="flex justify-between border-b border-burgundy/20 pb-2">
+                                <span>Migränebehandlung <span class="text-sm italic text-gray-600 block">(inkl. Ruhezeit)</span></span>
+                                <span class="text-right"><span class="block text-sm">45 Min</span><span class="font-bold text-burgundy">45,00 €</span></span>
+                            </li>
+                            <li class="flex justify-between border-b border-burgundy/20 pb-2">
+                                <span>Migränebehandlung <span class="text-sm italic text-gray-600 block">(inkl. Ruhezeit)</span></span>
+                                <span class="text-right"><span class="block text-sm">90 Min</span><span class="font-bold text-burgundy">87,00 €</span></span>
+                            </li>
+                            <li class="flex justify-between border-b border-burgundy/20 pb-2">
+                                <span>Klangmassage <span class="text-sm italic text-gray-600 block">(inkl. Ruhezeit)</span></span>
+                                <span class="text-right"><span class="block text-sm">45 Min</span><span class="font-bold text-burgundy">51,00 €</span></span>
+                            </li>
+                            <li class="flex justify-between pb-2">
+                                <span>Klangmassage <span class="text-sm italic text-gray-600 block">(inkl. Ruhezeit)</span></span>
+                                <span class="text-right"><span class="block text-sm">90 Min</span><span class="font-bold text-burgundy">96,00 €</span></span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+            </div>
+            <p class="text-center text-xs text-gray-500 mt-10">***Preise Stand 01.07.2024, Preisänderungen vorbehalten. Satz- und Druckfehler vorbehalten.***</p>
+        </div>
     </section>
-  </main>
 
-  <footer class="site-footer">
-    <div class="container">
-      <small>© <span id="year"></span> MySite. All rights reserved.</small>
-    </div>
-  </footer>
+    <section id="advantages" class="relative py-24 bg-burgundy overflow-hidden">
+        <div class="absolute inset-0 bg-[url('Image_2.jpg')] bg-cover bg-center opacity-40"></div>
+        
+        <div class="relative z-10 max-w-4xl mx-auto px-4 text-center text-peach">
+            <h2 class="text-3xl md:text-5xl font-serif font-bold text-gold mb-6 drop-shadow-md">Die Kraft des Ayurveda</h2>
+            <div class="w-24 h-1 bg-gold mx-auto mb-10"></div>
+            
+            <p class="text-lg md:text-xl leading-relaxed mb-6 drop-shadow">
+                Ayurveda, das uralte Wissen vom Leben, bietet weit mehr als nur körperliche Entspannung. Unsere traditionellen Behandlungen verwenden warme, individuell abgestimmte Kräuteröle, die tief in das Gewebe eindringen.
+            </p>
+            <p class="text-lg md:text-xl leading-relaxed drop-shadow">
+                Diese heilsamen Berührungen lösen nicht nur hartnäckige Muskelverspannungen, sondern beruhigen das Nervensystem, fördern den Abtransport von Toxinen und harmonisieren Ihre innere Energie. Erleben Sie, wie sich Stress in Wohlbefinden verwandelt und Körper, Geist und Seele wieder in Einklang kommen.
+            </p>
+        </div>
+    </section>
+
+    <footer id="contact" class="relative bg-black text-peachDark pt-20 pb-10">
+         <div class="absolute inset-0 bg-[url('Image_3.jpg')] bg-cover bg-center opacity-40"></div>
+         
+         <div class="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-12 text-center md:text-left border-b border-burgundy pb-12">
+                
+                <div>
+                    <h4 class="text-2xl font-serif text-gold font-bold mb-4">Shanthi-Wellness</h4>
+                    <p class="mb-4">Ayurvedische Behandlungen und traditionelle Thai-Massagen für Ihr ganzheitliches Wohlbefinden.</p>
+                    <p class="text-sm">Für alle Behandlungen vereinbaren Sie bitte vorab einen Termin.</p>
+                </div>
+
+                <div>
+                    <h4 class="text-xl font-serif text-gold font-bold mb-4">Kontakt</h4>
+                    <ul class="space-y-3">
+                        <li class="flex items-center justify-center md:justify-start gap-3">
+                            <span class="text-gold">📍</span> 
+                            <span>Sieglitzhofer Str. 18, 91054 Erlangen</span>
+                        </li>
+                        <li class="flex items-center justify-center md:justify-start gap-3">
+                            <span class="text-gold">📞</span> 
+                            <a href="tel:091319324818" class="hover:text-white transition">09131 93 24 818</a>
+                        </li>
+                        <li class="flex items-center justify-center md:justify-start gap-3">
+                            <span class="text-gold">💬</span> 
+                            <a href="https://wa.me/4915156420530" target="_blank" class="hover:text-white transition">+49 15156420530 (WhatsApp)</a>
+                        </li>
+                        <li class="flex items-center justify-center md:justify-start gap-3">
+                            <span class="text-gold">✉️</span> 
+                            <a href="mailto:info@shanthi-wellness.com" class="hover:text-white transition">info@shanthi-wellness.com</a>
+                        </li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h4 class="text-xl font-serif text-gold font-bold mb-4">Öffnungszeiten</h4>
+                    <ul class="space-y-2">
+                        <li><strong>Montag - Samstag:</strong></li>
+                        <li>10:00 bis 19:00 Uhr</li>
+                        <li class="mt-4 text-sm italic">Telefonisch erreichbar:<br>11:00 bis 17:00 Uhr (Anrufbeantworter)</li>
+                    </ul>
+                    
+                    <div class="flex justify-center md:justify-start gap-4 mt-6">
+                        <a href="#" class="w-10 h-10 rounded-full bg-burgundy flex items-center justify-center text-gold hover:bg-gold hover:text-burgundy transition-colors">FB</a>
+                        <a href="#" class="w-10 h-10 rounded-full bg-burgundy flex items-center justify-center text-gold hover:bg-gold hover:text-burgundy transition-colors">IG</a>
+                    </div>
+                </div>
+
+            </div>
+            
+            <div class="text-center mt-8 text-sm text-gray-400">
+                &copy; 2026 Shanthi-Wellness. Alle Rechte vorbehalten.
+            </div>
+         </div>
+    </footer>
+
 </body>
 </html>
